@@ -90,9 +90,15 @@ print('hello ADRC')
 
 range(1, 10)
 
+list(range(1,10))
+
+str(5)
+
 len('southwest airlines')
 
-################## if elif and else statements ##################
+type(5)
+
+################## if elif and else statements/Conditional Statements ##################
 
 # These are usually what you hear about with coding, they essentially help evaluate what to do
 # They each check if something is True or False, then if it determines that something is True, it will execute whatever instructions you give it
@@ -102,7 +108,7 @@ study = 'TAD'
 # "if" is always the first line for these
 # Since we're not creating variables here, we have to use == instead of =. The computer won't understand why you're trying to create a variable
 
-if study == 'meter':
+if (study == 'meter'):
     print('do you have social anxiety')
     
 # you can have as many elif statements as you like, unlike the if and else statements
@@ -154,11 +160,13 @@ x = 0
 
 while x < 10:
     
-    # this += essentially just adds 1 to the current value of 1
+    # this += essentially just adds 1 to the current value of x
     x += 1
     
     # i'll explain the f and the brackets
     print(f'{x} is not equal to 10')
+    
+    print('not done')
     
 # FOR loops - these are loops that will repeat your instructions until it finishes cycling through the variable you give it
 
@@ -176,3 +184,25 @@ for type in cycle:
         
         print(f'The {type} cycle is {percent}% complete')
         
+        
+#####################################################################################################################
+
+# Assignment 1
+
+# 1. Create a new variable that contains the name of each of your classes
+
+
+# 2. Create a list that contains a range of numbers from 1 to the total number of classes you have
+
+
+# 3. Create a dictionary using the list and the class variables where the key is the order of when you have each class in a week (i.e. psych 101 is the first class in the week on Monday so this would correspond to 1)
+
+
+# 4. Print the list of keys in the dictionary. Then, print the list of values in the dictionary.
+    # 4a. Print the number of the keys and the number of the values using the len() function.
+
+
+# 5. Using conditional statements, check if the first 5 letters of the first class in your dictionary is 'Psych'; if True, print "this is a psych class" and if False, print "this is not a psych class"
+
+
+# 6. 
