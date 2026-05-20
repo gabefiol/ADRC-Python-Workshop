@@ -8,4 +8,9 @@
 # 2. Create another dictionary variable where the keys are the names of the classes and the values are the dates of your final exam (formatted "MM/DD").
 # Use a for loop to iterate through the class names. Within this loop, create other loops to iterate through the months of the year (1 - 12)
 # and days in a month (1 - 31). Don't worry about months with less than 31 days.
-# Once the month/day hits the 
+# Once the month/day hits the exam date for that class, print 'today is exam day' and if not, print "not exam day" then skip the rest of the date combinations 
+# and move onto the next class.
+
+# 3. Copy and paste this string: 'abcdefghijklmnopqrstuvwxyz" and assign to a variable named alphabet. Use a for loop to iterate
+# through the characters in the string to make a list that contains the letters of your first name.
+# Example output: ['g','a','b','e']
