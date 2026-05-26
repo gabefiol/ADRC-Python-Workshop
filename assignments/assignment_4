@@ -1,0 +1,30 @@
+########### Assignment 4 ###########
+
+# Let's start getting into libraries - I showed you these at the beginning of the workshops
+# Libraries are packages of extra "content" for python - they could contain new kinds of data structures, functions, etc.
+# Some important ones are pandas, numpy, seaborn, matplotlib
+
+# Libraries must be added to each python file/google colab notebook by following specific syntax
+# import _____ as ___ -> "import" is the keyword that loads the library and "as" is just a way of renaming the library to make it quicker to call
+# ex. import pandas as pd
+
+# pandas is pretty ubiquitous in data analysis, it allows you to load datasets into your python file and manipulate/analyze them
+# numpy contains useful mathematical functions that you can use on your data like mean, SD, + more
+# seaborn and matplotlib let you make visualizations of data but in this assignment, we'll use seaborn to also load data
+
+import seaborn as sns
+
+# Let's load a dataset called attention - this contains scores for participants on an attention task. 
+# I'd search "explain seaborn attention dataset" to see what each column represents. 
+attention = sns.load_dataset('attention')
+
+# attention will now contain what's called a pandas dataframe - this basically looks like a spreadsheet
+# You'll notice that libraries use each other to build their tools. In this case, a pandas data structure (dataframe) is used to create a variable
+# from seaborn.
+
+# run attention alone to see what it looks like:
+attention
+
+# pandas dataframes are kinda like dictionaries - you can think of it as a dictionary with single strings as keys and lists as values.
+# In this framework, the keys are column names and the values are the data below the column names.
+
