@@ -11,6 +11,6 @@
 # Once the month/day hits the exam date for that class, print 'today is exam day' and if not, print "not exam day" then skip the rest of the date combinations 
 # and move onto the next class.
 
-# 3. Copy and paste this string: 'abcdefghijklmnopqrstuvwxyz" and assign to a variable named alphabet. Use a for loop to iterate
-# through the characters in the string to make a list that contains the letters of your first name.
+# 3. Copy and paste this string: 'abcdefghijklmnopqrstuvwxyz" and assign to a variable named alphabet. Create another variable named "name" in which you store your name as a string.
+# Use a for loop to iterate through the characters in the string to make a list that contains the letters of your first name.
 # Example output: ['g','a','b','e']
