@@ -16,6 +16,7 @@ import seaborn as sns
 
 # Let's load a dataset called attention - this contains scores for participants on an attention task. 
 # I'd search "explain seaborn attention dataset" to see what each column represents. 
+
 attention = sns.load_dataset('attention')
 
 # attention will now contain what's called a pandas dataframe - this basically looks like a spreadsheet
@@ -23,8 +24,25 @@ attention = sns.load_dataset('attention')
 # from seaborn.
 
 # run attention alone to see what it looks like:
+
 attention
 
 # pandas dataframes are kinda like dictionaries - you can think of it as a dictionary with single strings as keys and lists as values.
 # In this framework, the keys are column names and the values are the data below the column names.
 
+############################################################################################################################################
+
+# Let's learn a bit more about how to use the dataframe data structure, feel free to use google or some AI tool to help!
+
+# 1. Use the lines of code above to import seaborn and create the attention variable above. Using the attention variable, return the column names.
+# Either place them in a print() function or just return it in the line.
+# The output should look like this: Index(['Unnamed: 0', 'subject', 'attention', 'solutions', 'score'], dtype='object')
+
+# 2. Remembering the dictionary framework I mentioned above, try returning just the values using the column name "attention."
+# The output should look like two columns, one with numbers ranging from 0 - 59 and the other with strings "divided" and "focused"
+
+# 3. Create what we would call a "counter" variable which is equal to 0.
+# Use a for loop to go through all the values in the column titled "score". 
+# IF the value equals 9, add 1 (and set the sum equal) to the counter variable. 
+# This will tell you how many times the participants earned the max score (9). Print the total.
+# The output should be 2
