@@ -63,6 +63,12 @@ second_dictionary = {'aleeza' : ['lab manager', 'VR study'],
 third_dictionary = {}
 third_dictionary['key'] = 'value'
 
+# We can collect a list of the keys and values (separately) by using the following methods
+# These may look like lists but don't fully act like them. You can convert them into a list by using the list() function
+
+dictionary_variable.keys() # this will return: dict_keys([1, 2, 3])
+dictionary_variable.values() # this will return: dict_values(['january', 'february', 'march'])
+
 # INDEXING - not a data structure but important tool for strings and lists
 # this is how we pull specific items out of strings or lists
 # every item in a list or character in a string has a position, unfortunately they all start at position 0
