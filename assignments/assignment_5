@@ -1,1 +1,33 @@
+########### Assignment 5 ###########
+
+# Now we'll talk a little bit more about functions
+
+# As a reminder, here are some examples:
+  # print() - returns whatever you enter in the parentheses in your output
+  # len() - returns the length of whatever data structure you pass through it
+  # range(startNum, endNum, skipNum) - returns a range of numbers; you can convert it to a list to see the full list of numbers
+# Some data structure conversion functions:
+  # str() - converts whatever you pass through it to a string
+  # int() - converts whatever you pass through it to an integer, typically do this with floats or numbered strings ('5')
+  # list() - converts whatever you pass through it to a list, can use this on range()
+
+# There are plenty more (especially in libraries) but we can also create our own functions.
+# We want to create our own functions when we have repetitive chunks of code that can be reused.
+# Let's look at how you would create a function:
+
+def my_function(input):
+
+  input += 1
+  print(f'your input is now {input}')
+
+  return input
+
+# The function basically adds one to your input and prints the new value. The last line "return input" will return 
+# the new value of input. You can assign this to a new variable. See the function in action below:
+
+variable = my_function(1)
+
+# "variable" will now be assigned to the value of 2 and "your input is now 2" will be printed
+
+########################################################################################################################################
 
