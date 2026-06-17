@@ -31,3 +31,22 @@ variable = my_function(1)
 
 ########################################################################################################################################
 
+# 1. Going back to the last assignment, let's load the 'attention' dataset again. Also load the 'fmri' dataset.
+# Create a function that returns the 'subject' column from either dataset.
+
+# 2. Import numpy and find the square root function - you can either look online or use the tab key to find it.
+# Also use this new exponent operator ** (ex. 2 ** 2 = 4).
+# Use this to create a standard deviation function and recreate the mean function we made together. Return the SD and mean, respectively.
+# Just as a reminder, this is the standard deviation formula: square_root(sum(every_value - mean) ** 2 / (num_of_values - 1))
+# 2b. Using our standard deviation and mean functions, take the standard deviation and mean of the 'signal' column in the fmri dataset.
+# Output here should be: mean = 0.003539768564096969; SD = 0.09388556308642104
+
+# 3. Copy and paste these lists and assign them to variables: 
+
+["Mateo V.", "Freya H.", "Julian C.", "Isla M.", "Silas T.", "Eliana B.", "Kai G.", "Nora F.", "Archer H.", "Lyra B."]
+["Jasper K.", "Leo M.", "Julian C.", "Sienna P.", "Ethan W.", "Chloe D.", "Oliver J.", "Maya R.", "Mateo V.", "Freya H."]
+
+# Let's assume these are participant names in different studies. Sometimes we don't want pts to be in two studies at once so let's find
+# which ones are in both studies.
+# Create a function that will take in two lists and checks if there are any names that overlap. Return the number of overlapping pts.
+# Output of function should be 3.
