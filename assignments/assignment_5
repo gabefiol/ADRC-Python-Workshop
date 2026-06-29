@@ -40,6 +40,7 @@ variable = my_function(1)
 # Just as a reminder, this is the standard deviation formula: square_root(sum(every_value - mean) ** 2 / (num_of_values - 1))
 # 2b. Using our standard deviation and mean functions, take the standard deviation and mean of the 'signal' column in the fmri dataset.
 # Output here should be: mean = 0.003539768564096969; SD = 0.09388556308642104
+# Hint: use for loops to create the sums
 
 # 3. Copy and paste these lists and assign them to variables: 
 
@@ -50,3 +51,5 @@ variable = my_function(1)
 # which ones are in both studies.
 # Create a function that will take in two lists and checks if there are any names that overlap. Return the number of overlapping pts.
 # Output of function should be 3.
+# Hint: use for loops, conditional statements, and a counter variable
+  # if I haven't gone over the keyword "in," feel free to look it up for this - it'll make comparing values easier.
