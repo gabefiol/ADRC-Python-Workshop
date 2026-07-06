@@ -1,1 +1,31 @@
+########### Assignment 6 ###########
 
+# Let's continue using functions to practice everything we've gone over so far
+
+# Continue using the attention and fmri datasets (or use any other seaborn dataset you like)
+
+# 1. Let's create a function to find the median of a dataset.
+# First, let's order the data so that it goes from lowest to highest value. You can use the function sorted() to do this or
+# create a function to sort it as an exercise in programming logic.
+# You'll have to take into account whether there is an even or odd number of values -> use conditional statements for this
+  # if odd, you can take the number that is at the middle of the dataset -> use the len() function to determine where the middle is
+  # if even, take the two numbers at the middle and calculate the average of those two -> also use len and you could even use your mean function
+# Output for fmri['signal']: -0.0136532432489
+
+# 2. Let's also create a mode function.
+# You'll want to find the value that appears the most times in the dataset
+# As always, there are many different ways to approach this but I'd recommend the following:
+  # Use a dictionary that keeps track of all the different numbers in the dataset and how many times they occur (a counter variable would help here)
+  # Use a for loop to iterate through every variable in the dataset
+  # You'll need some conditional statements to evaluate whether you've seen the value already 
+    # Create new keys in the dictionary if it hasn't already appeared and add to the counter variable if it has been added
+# Output for attention['score']: 6
+
+# 3. Now let's try to find outliers in our data using z-scores (assuming normal distribution)
+# We'll want to continue using our mean and SD functions.
+# The formula we're working with to create z-scores is: (value - mean) / SD
+# Any value from this that is > 3 or < -3 would be considered an outlier -> use a conditional statement to evaluate this
+# You can use a for loop to iterate through each item in the dataset. Then, calculate the z-score with the formula above.
+# Let's return a list that includes all of the outlier values.
+# Output for fmri['signal']: [0.337143297554,0.29463915742,0.312811033675,0.39046573376,0.494786865197,0.291884318776,0.564984721448,0.340479918138,0.405840057028,0.298009042033,0.345918074368,0.296960232897,0.381495102897,0.460896318187,0.476055495497,0.346774672362,0.287293980823,0.307250437048,0.324264821523,0.31585962119,0.455574818936,0.321334601283,0.410660972614,0.319009013543]
+# You can just copy and paste this whole list into your code and run your_output == above_list and if it evaluates to true, it's a success
