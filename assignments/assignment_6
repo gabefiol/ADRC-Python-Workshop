@@ -19,6 +19,8 @@
   # Use a for loop to iterate through every variable in the dataset
   # You'll need some conditional statements to evaluate whether you've seen the value already 
     # Create new keys in the dictionary if it hasn't already appeared and add to the counter variable if it has been added
+    # Refer to line 64 in the workshop file to help here.
+    # Also, I'd use the keywords "in" or "not in" to evaluate whether the keys already exist in the dictionary.
 # Output for attention['score']: 6
 
 # 3. Now let's try to find outliers in our data using z-scores (assuming normal distribution)
