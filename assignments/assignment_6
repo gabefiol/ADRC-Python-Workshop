@@ -8,7 +8,7 @@
 # First, let's order the data so that it goes from lowest to highest value. You can use the function sorted() to do this or
 # create a function to sort it as an exercise in programming logic.
 # You'll have to take into account whether there is an even or odd number of values -> use conditional statements for this
-  # if odd, you can take the number that is at the middle of the dataset -> use the len() function to determine where the middle is
+  # if odd, you can take the number that is at the middle of the dataset -> use the len() function to determine where the middle is and np.round() to find the middle index
   # if even, take the two numbers at the middle and calculate the average of those two -> also use len and you could even use your mean function
   # Use the math operator % to find the remainder (and determine even or odd)
 # Output for fmri['signal']: -0.0136532432489
