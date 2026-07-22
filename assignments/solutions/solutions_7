@@ -22,3 +22,35 @@ def check_na(data):
     # the list is our output
     return na_list
 
+# 2: 
+
+
+# input is a whole dataframe
+
+def create_mean_col(data):
+    
+    # create an empty list which will eventually hold all the column names you intend to average
+    select_cols = []
+    
+    # iterate through all of the column names
+    for col in data.columns:
+        
+        # evaluate if the string "item" is in the column name
+        if 'item' in col:
+            # add any column name with "item" in it to the column list
+            select_cols.append(col)
+        
+    # create an empty list that will hold all of the mean values for each row 
+    mean_list = []
+            
+    # iterate through the length of the dataframe, we'll use this to move down the rows
+    for index in range(len(data)):
+        
+        # calculate the mean of the items we want for each index
+        mean = np.mean(data.iloc[index][select_cols])
+        
+        # add the mean to our list
+        mean_list.append(mean)
+        
+    # similar to dictionaries, we can create new columns by "indexing" by our column name and assigning it to our data
+    data['mean_scores'] = mean_list
