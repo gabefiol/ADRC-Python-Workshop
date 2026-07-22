@@ -1,0 +1,14 @@
+########### Assignment 7 ###########
+
+# Let's make some data cleaning functions
+
+# 1. Create a function that checks for NaNs and returns a list of the indices they are located at 
+  # NaNs are a specific data structure that serve as placeholders for missing data and will disrupt any analysis you try to do on the data.
+# Copy and paste this list as the input data: nan_list = ['Somewhat', 'Somewhat', 'A Little', 'A Little', np.nan, 'A Little', 'Very Much', np.nan, np.nan, 'Somewhat', np.nan, np.nan, 'A Little', 'Somewhat', np.nan, np.nan, 'A Little', 'Very Much', 'Very Much', np.nan]
+# We'll want to use a new function from the pandas library - pd.isna()
+# This function takes in a value (i.e. 1) and determines if it evaluates to the NaN data structure. Output is either True or False.
+# As a reminder, pd is short for pandas and we have to write it out to pull the function we want out of it.
+# Breaking this down, we need to do two things: create a count of NaN occurrences and a list of the indices they're located at.
+  # You'll want to use a for loop to iterate through every value
+  # In the for loop, use pd.isna() to evaluate whether the value is a NaN
+  # If True, add one to the NaN count and add the index to our list
