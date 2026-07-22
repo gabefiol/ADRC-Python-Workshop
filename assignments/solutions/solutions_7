@@ -1,1 +1,24 @@
 ### Assignment 7 Solutions ###
+
+# 1:
+
+# input is a list in this case but still naming it data (just a placeholder)
+
+def check_na(data):
+
+    # I chose to create a list with two indices - one has the NA count and the other has the indices of NAs
+    na_list = [0, []]
+
+    # To get the indices, I iterated through the length of the list - each value of i represents the index
+    for i in range(len(data)):
+
+        # Use pd.isna() to evaluate if the value is NaN (True)
+        if pd.isna(data[i]) == True:
+
+            # Add one to the counter variable in our list and append the index to our list of indices
+            na_list[0] += 1
+            na_list[1].append(i)
+
+    # the list is our output
+    return na_list
+
