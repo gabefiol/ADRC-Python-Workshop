@@ -14,8 +14,13 @@
   # If True, add one to the NaN count and add the index to our list
 # There should be 8 NaNs located at the following indices: [4, 7, 8, 10, 11, 14, 15, 19]
 
-# 2. Create a function that takes in a dataframe and creates a column with mean scores for data in a set of columns.
-# Import the data_7.csv file in the data folder using pd.read_csv().
+# 2. Create a function that takes in a dataframe and adds a column composed of mean scores for data in a set of columns.
+# Import the data_7.csv file in the data folder using pd.read_csv(). Put the path to the file in the parentheses as a string.
 # Let's make it so this function only calculates the mean of columns that have "item" in their name. We don't want "ID" to be included.
-# You'll use a for loop to iterate through each row of data and calculate the mean of each. Add this to a list.
-#
+# You'll use a for loop to iterate through each row of data and calculate the mean of each. Use np.mean(). Add this to a list.
+  # You can index the rows of a dataframe using .iloc[] - you can use this in the same way as you would with regular indexing.
+  # i.e. dataframe.iloc[0] will return all the data from the first row.
+# You can create the item mean column similar to how we would create new keys/values in dictionaries.
+  # Index by the column name you want and assign your list to this.
+# This function will be different from the other ones because you don't have to return anything, the dataframe will be changed without returning.
+# The mean for the first row should be 0.604071.
