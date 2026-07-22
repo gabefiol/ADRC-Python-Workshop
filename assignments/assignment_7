@@ -17,4 +17,5 @@
 # 2. Create a function that takes in a dataframe and creates a column with mean scores for data in a set of columns.
 # Import the data_7.csv file in the data folder using pd.read_csv().
 # Let's make it so this function only calculates the mean of columns that have "item" in their name. We don't want "ID" to be included.
-# 
+# You'll use a for loop to iterate through each row of data and calculate the mean of each. Add this to a list.
+#
