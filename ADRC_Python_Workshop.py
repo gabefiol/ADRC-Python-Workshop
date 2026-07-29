@@ -194,5 +194,43 @@ for type in cycle:
             
         else:
             continue
-        
+
+################## List Comprehension ##################
+
+# List comprehension is basically a condensed way to do loops - instead of doing them in a few lines, you can do them in one
+# Let's learn how to use them by comparing them to a standard for loop where we want a new list with the squared values of each even number:
+
+number_list = [1,2,3,4,5,6,7,8,9,10]
+output_list = []
+
+for number in number_list:
+
+    if number % 2 == 0:
+
+        output_list.append(number ** 2)
+
+# output_list should look like [4,16,36,64,100]
+
+# We can do this much quicker using list comprehension:
+
+output_list = [number ** 2 for number in number_list if number % 2 == 0]
+
+# You can see all the ways this resembles the for loop above, just with a different order of syntax
+    # Here, the "append" language is at the beginning of the line - we don't need to write out append because the [] signify to python that we're adding things to a list
+    # Then, we follow that with the actual for loop language, which is identical to the loop above ("for x in y" where x stores each item)
+    # And the end of the line is where we create our condition to evaluate evenness
+    # It may be helpful to think that python reads the line starting from "for," evaluates the condition, then adds whatever you entered to the direct right of the [ to the list
+
+# output_list will look the same regardless of which strategy you use
+# Note that this removes the need to create an empty list before your for loop - even that is included in this one line
+# I would advise using list comprehension when you have relatively simpler conditions you're trying to meet
+
+# Here's the example from madeline's work (I changed the output to be a list using the [], for simplicity):
+
+variance = [(x - mean_val) ** 2 for x in data]
+
+# "for x in data" is simply storing the value of each item in data
+# (x - mean_val) ** 2 is basically the append statement - append the squared difference of each value and mean to our list
+# Summing this list will return the actual variance
+
 #####################################################################################################################
