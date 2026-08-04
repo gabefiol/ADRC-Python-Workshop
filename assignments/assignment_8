@@ -1,1 +1,22 @@
+########### Assignment 8 ###########
 
+# We'll continue making some data cleaning functions here
+
+# 1. Let's make a function that imputes the data
+# Imputation is a method we use to handle missing values (NaNs)
+# Most commonly, this means taking the mean of the items of the row where the NaN is located (excluding the NaNs) and replacing the NaN with the mean
+# Ex. [1,2,3,NaN] - the mean would be 1.5 so the imputed list should look like [1,2,3,1.5]
+# To do this from scratch, we can use the check_na function we made last week
+  # This function located the indices in a list where NaNs were present but we can use it to evaluate each row in a dataframe
+  # NOTE: change your check_na function at the very beginning of it to convert your input to a list
+    # i.e. if your input is data, do: data = list(data)
+    # Your function won't be able to work the same way with df rows, aka Series
+# Iterate through each row and check for NaNs - if there are none, move onto the next row
+# If there are NaNs, you'll have to isolate the survey item columns where the NaNs are not located
+# Then take the mean of these columns at the row you're currently iterated on
+# Use df.loc[x,y] = mean to replace the value
+  # This looks similar to .iloc[] but .loc[] allows you to replace values at specific cells where .iloc[] does not
+  # Essentially, x represents the row index you want and y represents either the column name or list of column names you want to target (in this case, columns with NaNs)
+  # ex. df.loc[0, 'ID'] would return pt_0
+# We don't need to return anything, just using the .loc[] method above will change our df  without having to return anything
+# There should be no NaNs left after the function runs
