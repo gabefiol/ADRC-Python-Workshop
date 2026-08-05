@@ -2,7 +2,7 @@
 
 # We'll continue making some data cleaning functions here
 
-# 1. Let's make a function that imputes the data
+# 1. Let's make a function that imputes the data using the data_8.csv file
 # Imputation is a method we use to handle missing values (NaNs)
 # Most commonly, this means taking the mean of the items of the row where the NaN is located (excluding the NaNs) and replacing the NaN with the mean
 # Ex. [1,2,3,NaN] - the mean would be 1.5 so the imputed list should look like [1,2,3,1.5]
