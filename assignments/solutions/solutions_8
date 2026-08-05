@@ -1,0 +1,45 @@
+# Accept a dataframe as the input
+
+def impute_mean(df):
+    
+    # iterate through the range of the df - this gives us the index of each row
+    
+    for index in range(len(df)):
+        
+        # evaluate if the row has any NaNs
+        # the output of my check_na() function is a list that contains the indices where NaNs are located
+        # if there aren't any NaNs, my function should only create an empty list (which has a length of 0)
+        # continue tells python to move on to the next row
+        
+        if len(check_na(df.iloc[index])) == 0:
+            continue
+        
+        # if there is at least one NaN, do the following:
+        
+        else:
+            
+            # the indices here now represent the column indices (i.e. 'item_14' is the last column so the index is 17 for me)
+            # the output here should be a list of integers
+            
+            na_col_indices = check_na(df.iloc[index])
+            
+            # create a list of column names that we want to take the mean from - include any that have 'item' in their name and exclude the indices that are in our na_col_indices list
+            # here "i" will take on integer values from 0 to the length of the column list. so, we have to use df.columns[i] to pull the actual column name
+            # ultimately, we want a list of column names so that's why we use df.columns[i] to save all the columns that are ready for being meaned
+            
+            item_cols = [df.columns[i] for i in range(len(df.columns)) if i not in na_col_indices and 'item' in df.columns[i]]
+            
+            # calculate the mean of all the survey items at the row (index) and all the non-nan columns (item_cols)
+            
+            mean = np.mean(df.iloc[index][item_cols])
+            
+            # in order to replace the NaNs, we have to get the actual column names
+            # here, i'm just converting the indices of the NaN columns to the column names themselves
+            
+            na_cols = [df.columns[x] for x in na_col_indices]
+            
+            # df.loc[x, y] - .loc[] allows us to select specific cells. in this instance, x represents our row index and y represents the columns we want included
+            # we use loc to isolate the row we are currently on and the columns that have NaNs and set them equal to the mean (imputation)
+            
+            df.loc[index, na_cols] = mean
+
